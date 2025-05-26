@@ -1,0 +1,9 @@
+
+CREATE TABLE IF NOT EXISTS transactions (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  amount DECIMAL(10, 2) NOT NULL,
+  category VARCHAR(100),
+  type VARCHAR(10) CHECK (type IN ('income', 'expense')) NOT NULL,
+  date DATE NOT NULL DEFAULT CURRENT_DATE
+);
