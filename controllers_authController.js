@@ -1,5 +1,5 @@
 // controllers/authController.js
-const pool = require('../db');
+const pool = require('./db');
 const bcrypt = require('bcrypt');
 
 const registerUser = async (req, res) => {
