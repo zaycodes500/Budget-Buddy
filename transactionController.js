@@ -1,7 +1,7 @@
 
 // controllers/transactionController.js
 
-const db = require('../db'); // assuming db.js handles PostgreSQL pool
+const db = require('./db'); // assuming db.js handles PostgreSQL pool
 const jwt = require('jsonwebtoken');
 
 // Get all transactions for the authenticated user
